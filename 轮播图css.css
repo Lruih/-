@@ -1,0 +1,86 @@
+body
+{
+	margin: 0;
+}
+.banner
+{
+	height: 460px;
+	width: 1226px;
+	margin: 0 auto;
+	padding: 0;
+	/*成为相对定位*/
+	position: relative;
+	left: 0;
+	top: 0;
+
+}
+.img-item
+{
+	/*设banner为参照物*/
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.img-item img
+{
+	
+	height: 460px;
+	left: 0;
+	top: 0;
+	width: 1226px;
+}
+ul
+{
+	/*清楚左上方原点*/
+	list-style-type: none;
+}
+.btn
+{
+	width: 1226px;
+	height: 69px;
+	position: relative;
+	
+}
+.lbtn
+{
+	position: absolute;
+	top: 200px;
+	width: 42px;
+	height: 69px;
+	background:url(img/4.png);
+	background-position-x: 83px;
+	left: 0px;
+}	
+.lbtn:hover{background-position-x: 167px;/*鼠标放上改变图片*/}
+.rbtn
+{
+
+	width: 42px;
+	height: 69px;
+	position: absolute;
+	right: 0px;
+	background:url(img/4.png);
+	background-position-x: 42px;/*改变图片位置*/
+	top: 200px;
+}
+.rbtn:hover{background-position-x: 124px;} 
+.tab-btn
+{
+	height: 35px;
+	width: 140px;
+	position: absolute;
+	left: 575px;
+	bottom: 40px;
+	
+}	
+.tab-circle
+{
+	margin: 10px;
+	float: left;
+	width: 6px;
+	height: 6px;
+	/*边框*/
+	border: 2px solid #C0C0C0FF;
+	border-radius: 50%;
+}	
