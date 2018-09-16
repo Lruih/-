@@ -12,7 +12,7 @@
 	    <div class="ban-img">
 	    	<ul>
 	    		<li class="img-item">
-	    			<img src="img/1.jpg" alt="">
+	    			<img class="appear" src="img/1.jpg" alt="">
 	    		</li>
 	    		<li class="img-item">
 	    			<img src="img/2.jpg" alt="">
@@ -30,10 +30,56 @@
 
 		<!-- tab过度 -->
 		<div class="tab-btn">
-			<i class="tab-circle"></i>
-			<i class="tab-circle"></i>
-			<i class="tab-circle"></i>
+			<ul>
+				<li class="on"></li>
+				<li></li>
+				<li></li>
+			</ul>
+			
 		</div>
 	</div>
+	<script type="text/javascript">/*用js代码*/
+		var orbtn = document.querySelector('.rbtn');/*获取元素的方式*/
+		var olbtn = document.querySelector('.lbtn');
+		var oimgs = document.querySelectorAll('.img-item img');
+		var otabs = document.querySelectorAll('.tab-btn li');
+		var index = 0/*;保存图片数组的下标*/
+		auto();/*使自动函数自动运行*/
+		function auto()
+		{
+			setInterval(function() {change(true);},2000);
+		}
+		// 因为代码大多相同 建立一个图片改变的函数
+		function change(bool)/*boolj只有两个值 true或false*/
+		{
+			oimgs[index].className = '';
+			otabs[index].className = '';
+			if (true)
+			 {
+			 	index++;
+			 	if (index>2) {index = 0;}
+			 }
+			else 
+				{index--;
+					if (index<0) {index = 2;}
+					
+				}
+			oimgs[index].className = 'appear';
+			otabs[index].className = 'on';
+			
+
+		}
+		orbtn.onclick = function()/*事件发生*/
+		{
+			change(true);
+		}
+		olbtn.onclick = function()
+		{
+			change(false);
+		}
+
+		
+	</script>
+
 </body>
 </html>
